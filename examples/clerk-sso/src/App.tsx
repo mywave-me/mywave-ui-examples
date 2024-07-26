@@ -1,8 +1,8 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 import "./index.css";
-import DashboardLayout from "./layouts/DashboardLayout";
-import DashboardPage from "./routes/Dashboard";
+import MyWaveLayout from "./layouts/MyWaveLayout";
+import MyWavePage from "./routes/MyWave";
 import IndexPage from "./routes";
 import RootLayout from "./layouts/RootLayout";
 import SignInPage from "./routes/SignIn";
@@ -16,9 +16,9 @@ const router = createBrowserRouter([
       { path: "/sign-in/*", element: <SignInPage /> },
       { path: "/sign-up/*", element: <SignUpPage /> },
       {
-        element: <DashboardLayout />,
-        path: "dashboard",
-        children: [{ path: "/dashboard", element: <DashboardPage /> }],
+        element: <MyWaveLayout />,
+        path: "mywave",
+        children: [{ path: "/mywave", element: <MyWavePage /> }],
       },
     ],
   },

@@ -30,7 +30,7 @@ export default function RootLayout() {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/dashboard">Dashboard</Link>
+            <Link to="/mywave">MyWave</Link>
           </li>
           <SignedOut>
             <li>
