@@ -6,7 +6,6 @@ import MyWavePage from "./routes/MyWave";
 import IndexPage from "./routes";
 import RootLayout from "./layouts/RootLayout";
 import SignInPage from "./routes/SignIn";
-import SignUpPage from "./routes/SignUp";
 
 const router = createBrowserRouter([
   {
@@ -14,7 +13,6 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <IndexPage /> },
       { path: "/sign-in/*", element: <SignInPage /> },
-      { path: "/sign-up/*", element: <SignUpPage /> },
       {
         element: <MyWaveLayout />,
         path: "mywave",

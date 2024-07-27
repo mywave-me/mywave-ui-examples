@@ -5,6 +5,7 @@ import {
   SignedOut,
   SignOutButton,
 } from "@clerk/clerk-react";
+import css from "./RootLayout.module.scss";
 
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 
@@ -21,29 +22,30 @@ export default function RootLayout() {
       routerReplace={(to) => navigate(to, { replace: true })}
       publishableKey={PUBLISHABLE_KEY}
     >
-      <header>
+      <header className={css.header}>
         <div>
-          <h1>MyWave + Clerk SSO</h1>
+          <h1 className={css.title}>MyWave + Clerk SSO</h1>
         </div>
-        <ul>
+        <ul className={css.nav}>
           <li>
             <Link to="/">Home</Link>
           </li>
           <li>
             <Link to="/mywave">MyWave</Link>
           </li>
-          <SignedOut>
-            <li>
-              <Link to="/sign-in">Sign In</Link>
-            </li>
-          </SignedOut>
-
-          <SignedIn>
-            <li>
-              <SignOutButton />
-            </li>
-          </SignedIn>
         </ul>
+        <div>
+          <SignedOut>
+            <Link to="/sign-in" className={css.auth}>
+              Sign In
+            </Link>
+          </SignedOut>
+          <SignedIn>
+            <SignOutButton>
+              <button className={css.auth}>Sign out</button>
+            </SignOutButton>
+          </SignedIn>
+        </div>
       </header>
       <main>
         <Outlet />
