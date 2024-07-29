@@ -1,46 +1,47 @@
-import { useUser } from "@clerk/clerk-react";
-import myWaveRender, { MWSdk, MWSdkConfig } from "@mywave/ui";
-
 import "@mywave/ui/dist/style.css";
+import { useQuery } from "@tanstack/react-query";
 import { useEffect } from "react";
+import { User } from "oidc-client-ts";
 
-const config = {
-  apiUrl: import.meta.env.VITE_API_URL,
-  loginUrl: import.meta.env.VITE_LOGIN_URL,
-  signupUrl: import.meta.env.VITE_SIGNUP_URL,
-};
-
-const sdkConfig = new MWSdkConfig(
-  config.apiUrl,
-  config.loginUrl,
-  config.signupUrl,
-);
-const sdk = new MWSdk(sdkConfig);
-
-sdkConfig.setLocale(window.navigator.language);
+import myWaveRender from "@mywave/ui";
+import { mwSdk, mwSdkConfig, userManager } from "../sdk";
 
 export default function MyWavePage() {
-  const { user } = useUser();
+  const { data: user, error } = useQuery({
+    queryKey: ["user"],
+    queryFn: () => userManager.getUser(),
+  });
 
   useEffect(() => {
-    async function loginAndRender() {
-      if (!user) return;
-
-      await sdk.clearCurrentStoredAccount();
-      await sdk.authenticate({
-        username: user.id,
-        password: "clerk-example",
-      });
-
-      myWaveRender("mywave", {
-        sdk,
-        sdkConfig,
-        "history.enable": true,
-      });
+    if (user) {
+      loginAndRender(user);
     }
-
-    loginAndRender();
   }, [user]);
 
+  if (error) {
+    return (
+      <div className="pageCenter">
+        {error?.message ?? "Failed to render MyWave"}
+      </div>
+    );
+  }
+  if (!user) {
+    return <div className="pageCenter">Sign in to use MyWave</div>;
+  }
+
   return <div id="mywave" />;
+}
+
+async function loginAndRender(user: User) {
+  await mwSdk.clearCurrentStoredAccount();
+  await mwSdk.authenticate({
+    accessToken: user.access_token,
+    refreshToken: user.refresh_token,
+  });
+
+  myWaveRender("mywave", {
+    sdk: mwSdk,
+    sdkConfig: mwSdkConfig,
+    "history.enable": true,
+  });
 }

@@ -1,55 +1,45 @@
-import { Link, Outlet, useNavigate } from "react-router-dom";
-import {
-  ClerkProvider,
-  SignedIn,
-  SignedOut,
-  SignOutButton,
-} from "@clerk/clerk-react";
+import { Link, Outlet } from "react-router-dom";
 import css from "./RootLayout.module.scss";
+import { mwSdk, userManager } from "../sdk";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
-const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
-
-if (!PUBLISHABLE_KEY) {
-  throw new Error("Missing Publishable Key");
-}
+const queryClient = new QueryClient();
 
 export default function RootLayout() {
-  const navigate = useNavigate();
-
   return (
-    <ClerkProvider
-      routerPush={(to) => navigate(to)}
-      routerReplace={(to) => navigate(to, { replace: true })}
-      publishableKey={PUBLISHABLE_KEY}
-    >
-      <header className={css.header}>
-        <div>
-          <h1 className={css.title}>MyWave + Clerk SSO</h1>
-        </div>
-        <ul className={css.nav}>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/mywave">MyWave</Link>
-          </li>
-        </ul>
-        <div>
-          <SignedOut>
-            <Link to="/sign-in" className={css.auth}>
+    <QueryClientProvider client={queryClient}>
+      <div>
+        <header className={css.header}>
+          <div>
+            <h1 className={css.title}>MyWave + Clerk SSO</h1>
+          </div>
+          <ul className={css.nav}>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/mywave">MyWave</Link>
+            </li>
+          </ul>
+          <div>
+            <Link to="/sign-in/redirect" className={css.auth}>
               Sign In
             </Link>
-          </SignedOut>
-          <SignedIn>
-            <SignOutButton>
-              <button className={css.auth}>Sign out</button>
-            </SignOutButton>
-          </SignedIn>
-        </div>
-      </header>
-      <main>
-        <Outlet />
-      </main>
-    </ClerkProvider>
+            <button
+              className={css.auth}
+              onClick={async () => {
+                await mwSdk.clearCurrentStoredAccount();
+                await userManager.signoutRedirect();
+              }}
+            >
+              Sign out
+            </button>
+          </div>
+        </header>
+        <main>
+          <Outlet />
+        </main>
+      </div>
+    </QueryClientProvider>
   );
 }

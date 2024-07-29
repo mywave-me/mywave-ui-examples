@@ -1,23 +1,20 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
-import "./index.css";
-import MyWaveLayout from "./layouts/MyWaveLayout";
-import MyWavePage from "./routes/MyWave";
-import IndexPage from "./routes";
 import RootLayout from "./layouts/RootLayout";
-import SignInPage from "./routes/SignIn";
+import IndexPage from "./routes/index";
+import MyWavePage from "./routes/MyWave";
+import SignInRedirect from "./routes/SignInRedirect";
+import SignInCallback from "./routes/SignInCallback";
+import "./index.css";
 
 const router = createBrowserRouter([
   {
     element: <RootLayout />,
     children: [
       { path: "/", element: <IndexPage /> },
-      { path: "/sign-in/*", element: <SignInPage /> },
-      {
-        element: <MyWaveLayout />,
-        path: "mywave",
-        children: [{ path: "/mywave", element: <MyWavePage /> }],
-      },
+      { path: "/sign-in/redirect", element: <SignInRedirect /> },
+      { path: "/sign-in/callback", element: <SignInCallback /> },
+      { path: "/mywave", element: <MyWavePage /> },
     ],
   },
 ]);
