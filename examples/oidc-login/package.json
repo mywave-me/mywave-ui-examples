@@ -1,5 +1,5 @@
 {
-  "name": "@mywave/example-clerk-sso",
+  "name": "@mywave/example-oidc-login",
   "private": true,
   "version": "0.0.0",
   "type": "module",

@@ -11,7 +11,7 @@ export default function RootLayout() {
       <div>
         <header className={css.header}>
           <div>
-            <h1 className={css.title}>MyWave + Clerk SSO</h1>
+            <h1 className={css.title}>MyWave + OIDC Login</h1>
           </div>
           <ul className={css.nav}>
             <li>
