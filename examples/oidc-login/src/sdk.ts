@@ -1,13 +1,25 @@
 import { UserManager } from "oidc-client-ts";
 import { MWSdk, MWSdkConfig } from "@mywave/ui";
 
-const config = {
-  apiUrl: import.meta.env.VITE_API_URL,
-  loginUrl: import.meta.env.VITE_LOGIN_URL,
-  signupUrl: import.meta.env.VITE_SIGNUP_URL,
-  oidcClientId: import.meta.env.VITE_OIDC_CLIENT_ID,
-  oidcClientSecret: import.meta.env.VITE_OIDC_CLIENT_SECRET,
-  oidcAuthority: import.meta.env.VITE_OIDC_AUTHORITY,
+const {
+  VITE_API_URL,
+  VITE_LOGIN_URL,
+  VITE_LLM_INTENT_RECOGNISE_ENDPOINT,
+  VITE_LLM_INTENT_RECOGNISE_API_KEY,
+  VITE_OIDC_CLIENT_ID,
+  VITE_OIDC_CLIENT_SECRET,
+  VITE_OIDC_AUTHORITY,
+} = import.meta.env;
+
+export const config = {
+  apiUrl: VITE_API_URL,
+  loginUrl: VITE_LOGIN_URL,
+  signupUrl: "",
+  llmIntentRecogniseEndpoint: VITE_LLM_INTENT_RECOGNISE_ENDPOINT,
+  llmIntentRecogniseApiKey: VITE_LLM_INTENT_RECOGNISE_API_KEY,
+  oidcClientId: VITE_OIDC_CLIENT_ID,
+  oidcClientSecret: VITE_OIDC_CLIENT_SECRET,
+  oidcAuthority: VITE_OIDC_AUTHORITY,
 };
 
 export const userManager = new UserManager({

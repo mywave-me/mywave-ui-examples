@@ -4,7 +4,8 @@ import { useEffect } from "react";
 import { User } from "oidc-client-ts";
 
 import myWaveRender from "@mywave/ui";
-import { mwSdk, mwSdkConfig, userManager } from "../sdk";
+import { config, mwSdk, mwSdkConfig, userManager } from "../sdk";
+import { format } from "date-fns";
 
 export default function MyWavePage() {
   const { data: user, error } = useQuery({
@@ -43,5 +44,38 @@ async function loginAndRender(user: User) {
     sdk: mwSdk,
     sdkConfig: mwSdkConfig,
     "history.enable": true,
+    getRecognisedIntent,
   });
+}
+
+async function getRecognisedIntent(input: string) {
+  // this format is required by the LLM API
+  const formattedDateTime = format(
+    new Date(),
+    "yyyy-MM-dd'T'HH:mm:ss.SSSSSSXXX",
+  );
+
+  const res = await fetch(config.llmIntentRecogniseEndpoint, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      text: input,
+      current_date_time: formattedDateTime,
+      api_key: config.llmIntentRecogniseApiKey,
+    }),
+  });
+
+  type RecognisedIntent = {
+    intent: string;
+    recognised_intent: {
+      type: string;
+      extracted_values: Record<string, string>;
+    };
+  };
+
+  const data: RecognisedIntent = await res.json();
+
+  return data;
 }
