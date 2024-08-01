@@ -60,7 +60,22 @@ B1 does not ask for OIDC client secret, so you should leave `VITE_OIDC_CLIENT_SE
 
 ### Instructions to get <Authentication Server Address> and <Client ID> on SAP B1.
 
-TBD
+`<Authentication Server Address>`
+  
+1. Sign in to System Landscape Directory
+2. Go to **Security** tab
+3. You will find **Authentication Server Address** under SAP Business One Authentication Service
+
+![screenshot](assets/SAPControlCenter.png)
+
+`<OIDC Client ID>`
+
+1. Sign in to SAP Business One Extension Single Sign On Manager
+2. Register a SSO client which Redirect Url is `http://localhost:5173/sign-in/callback`
+3. You will find `Client ID` in the client list
+
+![screenshot](assets/SAPExtensionSSOManager.png)
+
 
 ## Build the example app
 
