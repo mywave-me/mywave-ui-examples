@@ -1,0 +1,21 @@
+.MyWaveUI {
+  --tesselate-blue: #2084c5;
+
+  --mw-textlink-color: var(--tesselate-blue);
+  --mw-intent-submit-button-bg: var(--tesselate-blue);
+  --mw-intent-button-bg: #ecf0f8;
+
+  --mw-interaction-prompt-bg: #ecf0f8;
+  --mw-interaction-continue-bg: var(--tesselate-blue);
+  --mw-interaction-continue-disabled-bg: var(--tesselate-blue);
+
+  --mw-confirmation-positive-bg: var(--tesselate-blue);
+  --mw-confirmation-negative-bg: var(--tesselate-blue);
+
+  --mw-login-button-bg: var(--tesselate-blue);
+  --mw-navbar-bg: linear-gradient(187.05deg, #abcfe8 0.02%, #0c456b 102%);
+  --mw-sidebar-logo: url("assets/logo.png");
+  --mw-landing-page-logo: url("assets/logo.png");
+  --mw-login-modal-image: url("assets/logo.png");
+  --mw-error-modal-image: url("assets/logo.png");
+}
