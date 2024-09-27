@@ -10,18 +10,14 @@ Install the dependencies.
 npm | yarn | pnpm install
 ```
 
-Update the MyWave `config`. All that is required is the `apiUrl` for the `config` in the `main.tsx`. This should be the URL of the MyWave backend platform you want to MyWave UI point to. However if you are using the `loginUrl` and `signupUrl` you can add these as well (they are not required though so just leave if you are not sure).
+Add your `.env` file. You will need to create a `.env` file at the root of the project (or simply rename the existing `.env.example` to `.env`). The only required variable is the `VITE_MYWAVE_API_URL` one. This should be the URL of the MyWave backend platform you want to MyWave UI point to. However if you are using the `VITE_MYWAVE_LOGIN_URL` and `VITE_MYWAVE_SIGNUP_URL` you can add these as well (they are not required though so just remove them if you are not sure).
 
-```tsx
-// ./src/main.tsx
+```bash
+// ./.env
 
-const config = {
-  // The apiUrl should point to the MyWave backend platform. The frontend will not work without this.
-  apiUrl: '<MyWave backend platform URL>',
-  // The loginUrl and signupUrl are optional. They can be empty strings if not being used.
-  loginUrl: '',
-  signupUrl: '',
-}
+VITE_MYWAVE_API_URL=<MyWave backend platform URL>
+VITE_MYWAVE_LOGIN_URL=<optional login service URL remove if not using>
+VITE_MYWAVE_SIGNUP_URL=<optional signup service URL remove if not using>
 ```
 
 Start the dev server.
