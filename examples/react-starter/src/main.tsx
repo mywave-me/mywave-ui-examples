@@ -17,6 +17,12 @@ const sdk = new MWSdk(sdkConfig)
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <MyWaveUi sdk={sdk} sdkConfig={sdkConfig} options={{}} />
+    <MyWaveUi
+      sdk={sdk}
+      sdkConfig={sdkConfig}
+      options={{
+        'history.enable': true,
+      }}
+    />
   </StrictMode>
 )
