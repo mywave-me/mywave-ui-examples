@@ -8,6 +8,8 @@ import { getRecognisedIntent } from './api'
 import './index.css'
 import '@mywave/ui-react/dist/style.css'
 
+import { myCustomField } from './myCustomField'
+
 const sdkConfig = new MWSdkConfig(
   config.apiUrl,
   config.loginUrl,
@@ -24,6 +26,7 @@ createRoot(document.getElementById('root')!).render(
       options={{
         'history.enable': true,
         getRecognisedIntent,
+        customFields: [myCustomField],
       }}
     />
   </StrictMode>
