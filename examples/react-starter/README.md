@@ -10,12 +10,14 @@ Install the dependencies.
 npm | yarn | pnpm install
 ```
 
-Add your `.env` file. You will need to create a `.env` file at the root of the project (or simply rename the existing `.env.example` to `.env`). The only required variable is the `VITE_MYWAVE_API_URL` one. This should be the URL of the MyWave backend platform you want to MyWave UI point to. However if you are using the `VITE_MYWAVE_LOGIN_URL` and `VITE_MYWAVE_SIGNUP_URL` you can add these as well (they are not required though so just remove them if you are not sure).
+Create your `.env` file at the root of the project (or simply rename the existing `.env.example` to `.env`) and add the required variables.
 
 ```bash
 // ./.env
 
 VITE_MYWAVE_API_URL=<MyWave backend platform URL>
+VITE_LLM_INTENT_RECOGNISE_ENDPOINT=<LLM service endpoint>
+VITE_LLM_INTENT_RECOGNISE_API_KEY=<LLM service API key>
 VITE_MYWAVE_LOGIN_URL=<optional login service URL remove if not using>
 VITE_MYWAVE_SIGNUP_URL=<optional signup service URL remove if not using>
 ```
