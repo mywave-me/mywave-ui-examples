@@ -1,5 +1,4 @@
-import { AnyCustomFieldDetails } from '@mywave/ui-react'
-import renderReactField from './utils/renderReactField'
+import { AnyCustomFieldDetails, renderReactField } from '@mywave/ui-react'
 
 export const myCustomField: AnyCustomFieldDetails = {
   // name of the custom field as configured in the MyWave conversation
