@@ -12,6 +12,67 @@ importers:
         specifier: ^3.3.3
         version: 3.3.3
 
+  examples/custom-field-react-starter:
+    dependencies:
+      '@mywave/sdk':
+        specifier: 3.0.0
+        version: 3.0.0
+      '@mywave/ui-react':
+        specifier: 1.1.0
+        version: 1.1.0(@mywave/sdk@3.0.0)(react-dom@18.3.1(react@18.3.1))(react-router-dom@6.25.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
+      axios:
+        specifier: ^1.7.7
+        version: 1.7.7
+      date-fns:
+        specifier: ^3.6.0
+        version: 3.6.0
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+      valibot:
+        specifier: ^0.37.0
+        version: 0.37.0(typescript@5.5.4)
+    devDependencies:
+      '@eslint/js':
+        specifier: ^9.9.0
+        version: 9.10.0
+      '@types/react':
+        specifier: ^18.3.3
+        version: 18.3.3
+      '@types/react-dom':
+        specifier: ^18.3.0
+        version: 18.3.0
+      '@vitejs/plugin-react':
+        specifier: ^4.3.1
+        version: 4.3.1(vite@5.4.5(@types/node@20.14.12)(sass@1.77.8))
+      eslint:
+        specifier: ^9.9.0
+        version: 9.10.0
+      eslint-plugin-react-hooks:
+        specifier: ^5.1.0-rc.0
+        version: 5.1.0-rc-fb9a90fa48-20240614(eslint@9.10.0)
+      eslint-plugin-react-refresh:
+        specifier: ^0.4.9
+        version: 0.4.9(eslint@9.10.0)
+      globals:
+        specifier: ^15.9.0
+        version: 15.9.0
+      prettier:
+        specifier: ^3.3.3
+        version: 3.3.3
+      typescript:
+        specifier: ^5.5.3
+        version: 5.5.4
+      typescript-eslint:
+        specifier: ^8.0.1
+        version: 8.5.0(eslint@9.10.0)(typescript@5.5.4)
+      vite:
+        specifier: ^5.4.1
+        version: 5.4.5(@types/node@20.14.12)(sass@1.77.8)
+
   examples/oidc-login:
     dependencies:
       '@mywave/ui':
@@ -72,6 +133,67 @@ importers:
       vite:
         specifier: ^5.3.5
         version: 5.3.5(@types/node@20.14.12)(sass@1.77.8)
+
+  examples/react-starter:
+    dependencies:
+      '@mywave/sdk':
+        specifier: 3.0.0
+        version: 3.0.0
+      '@mywave/ui-react':
+        specifier: 1.1.0
+        version: 1.1.0(@mywave/sdk@3.0.0)(react-dom@18.3.1(react@18.3.1))(react-router-dom@6.25.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
+      axios:
+        specifier: ^1.7.7
+        version: 1.7.7
+      date-fns:
+        specifier: ^3.6.0
+        version: 3.6.0
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+      valibot:
+        specifier: ^0.37.0
+        version: 0.37.0(typescript@5.5.4)
+    devDependencies:
+      '@eslint/js':
+        specifier: ^9.9.0
+        version: 9.10.0
+      '@types/react':
+        specifier: ^18.3.3
+        version: 18.3.3
+      '@types/react-dom':
+        specifier: ^18.3.0
+        version: 18.3.0
+      '@vitejs/plugin-react':
+        specifier: ^4.3.1
+        version: 4.3.1(vite@5.4.5(@types/node@20.14.12)(sass@1.77.8))
+      eslint:
+        specifier: ^9.9.0
+        version: 9.10.0
+      eslint-plugin-react-hooks:
+        specifier: ^5.1.0-rc.0
+        version: 5.1.0-rc-fb9a90fa48-20240614(eslint@9.10.0)
+      eslint-plugin-react-refresh:
+        specifier: ^0.4.9
+        version: 0.4.9(eslint@9.10.0)
+      globals:
+        specifier: ^15.9.0
+        version: 15.9.0
+      prettier:
+        specifier: ^3.3.3
+        version: 3.3.3
+      typescript:
+        specifier: ^5.5.3
+        version: 5.5.4
+      typescript-eslint:
+        specifier: ^8.0.1
+        version: 8.5.0(eslint@9.10.0)(typescript@5.5.4)
+      vite:
+        specifier: ^5.4.1
+        version: 5.4.5(@types/node@20.14.12)(sass@1.77.8)
 
   examples/tesselate:
     dependencies:
@@ -424,12 +546,24 @@ packages:
   '@mywave/sdk@2.7.0':
     resolution: {integrity: sha512-2AHPePk2JuMdGqcaU7AKLxnyjddUm479NRG6v54VI8h4zdd9LJ2woi8C8XYHxVz2FWZkLpl+xcBc3MCTWTdEjA==, tarball: https://mywave.jfrog.io/artifactory/api/npm/npm-release-local/@mywave/sdk/-/@mywave/sdk-2.7.0.tgz}
 
+  '@mywave/sdk@3.0.0':
+    resolution: {integrity: sha512-6gnFNHbvfidJAx4o7zDPkTwdYc/M7N6JXNOJpFI0Qthyfsoj7GodBWXq4WDpNZFFPk3v8jyA2Fj+Uh4xZNBA9A==, tarball: https://mywave.jfrog.io/artifactory/api/npm/npm-release-local/@mywave/sdk/-/@mywave/sdk-3.0.0.tgz}
+
   '@mywave/ui-react@1.0.0':
     resolution: {integrity: sha512-639pOuH0IPRX7gCiJndKsSJ4T53tE4uw28kb1GndS6ZUjMvwIy0mG60H7qOnP0uE1wdbjyc+QKt8auyvOtcKTQ==, tarball: https://mywave.jfrog.io/artifactory/api/npm/npm-release-local/@mywave/ui-react/-/@mywave/ui-react-1.0.0.tgz}
     hasBin: true
     peerDependencies:
       '@mywave/sdk': latest
       react: ^18.0.0
+      react-router-dom: ^6.0.0
+
+  '@mywave/ui-react@1.1.0':
+    resolution: {integrity: sha512-NHraxVmFRNnzXY8JFOJGl5Z9eppP6XGbQcVSIycDVd7UCo2m/h2EJGu8NFARUXbEBwt865f2XI1dwHTz+hoNgA==, tarball: https://mywave.jfrog.io/artifactory/api/npm/npm-release-local/@mywave/ui-react/-/@mywave/ui-react-1.1.0.tgz}
+    hasBin: true
+    peerDependencies:
+      '@mywave/sdk': '>=3'
+      react: ^18.3.1
+      react-dom: ^18.3.1
       react-router-dom: ^6.0.0
 
   '@mywave/ui@0.0.12':
@@ -803,8 +937,14 @@ packages:
     resolution: {integrity: sha512-HGyxoOTYUyCM6stUe6EJgnd4EoewAI7zMdfqO+kGjnlZmBDz/cR5pf8r/cR4Wq60sL/p0IkcjUEEPwS3GFrIyw==}
     engines: {node: '>=8'}
 
+  asynckit@0.4.0:
+    resolution: {integrity: sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q==}
+
   axios@0.25.0:
     resolution: {integrity: sha512-cD8FOb0tRH3uuEe6+evtAbgJtfxr7ly3fQjYcMcuPlgkwVS9xboaVIpcDV+cYQe+yGykgwZCs1pzjntcGa6l5g==}
+
+  axios@1.7.7:
+    resolution: {integrity: sha512-S4kL7XrjgBmvdGut0sN3yJxqYzrDOnivkBiN0OFs6hLiUam3UPvswUo0kqGyhqUZGEOytHyumEdXsAkgCOUf3Q==}
 
   balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
@@ -860,6 +1000,10 @@ packages:
   color-name@1.1.4:
     resolution: {integrity: sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==}
 
+  combined-stream@1.0.8:
+    resolution: {integrity: sha512-FQN4MRfuJeHf7cBbBMJFXhKSDq+2kAArBlmRBvcvFE5BB1HZKXtSFASDhdlz9zOYwxh8lDdnvmMOe/+5cdoEdg==}
+    engines: {node: '>= 0.8'}
+
   concat-map@0.0.1:
     resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
 
@@ -879,6 +1023,9 @@ packages:
   date-fns@3.6.0:
     resolution: {integrity: sha512-fRHTG8g/Gif+kSh50gaGEdToemgfj74aRX3swtiouboip5JDLAyDE9F11nHMIcvOaXeOC6D7SpNhi7uFyB7Uww==}
 
+  date-fns@4.1.0:
+    resolution: {integrity: sha512-Ukq0owbQXxa/U3EGtsdVBkR1w7KOQ5gIBqdH2hkvknzZPYvBxb/aa6E8L7tmjFtkwZBu3UXBbjIgPo/Ez4xaNg==}
+
   debug@4.3.6:
     resolution: {integrity: sha512-O/09Bd4Z1fBrU4VzkhFqVgpPzaGbw6Sm9FEkBT1A/YBXQFGuuSxa1dN2nxgxS34JmKXqYx8CZAwEVoJFImUXIg==}
     engines: {node: '>=6.0'}
@@ -894,6 +1041,10 @@ packages:
   delay@5.0.0:
     resolution: {integrity: sha512-ReEBKkIfe4ya47wlPYf/gu5ib6yUG0/Aez0JQZQz94kiWtRQvZIQbTiehsnwHvLSWJnQdhVeqYue7Id1dKr0qw==}
     engines: {node: '>=10'}
+
+  delayed-stream@1.0.0:
+    resolution: {integrity: sha512-ZySD7Nf91aLB0RxL4KGrKHBXl7Eds1DAmEdcoVawXnLD7SDhpNgtuII2aAkg7a7QS41jxPSZ17p4VdGnMHk3MQ==}
+    engines: {node: '>=0.4.0'}
 
   dir-glob@3.0.1:
     resolution: {integrity: sha512-WkrWp9GR4KXfKGYzOLmTuGVi1UWFfws377n9cc55/tb6DuqyF6pcQ5AbiHEshaDpY9v6oaSr2XCDidGmMwdzIA==}
@@ -1045,6 +1196,10 @@ packages:
     peerDependenciesMeta:
       debug:
         optional: true
+
+  form-data@4.0.0:
+    resolution: {integrity: sha512-ETEklSGi5t0QMZuiXoA/Q6vcnxcLQP5vdugSpuAyi6SVGi2clPPp+xgEhuMaHC+zGgn31Kd235W35f7Hykkaww==}
+    engines: {node: '>= 6'}
 
   fsevents@2.3.3:
     resolution: {integrity: sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==}
@@ -1200,6 +1355,14 @@ packages:
     resolution: {integrity: sha512-LPP/3KorzCwBxfeUuZmaR6bG2kdeHSbe0P2tY3FLRU4vYrjYz5hI4QZwV0njUx3jeuKe67YukQ1LSPZBKDqO/Q==}
     engines: {node: '>=8.6'}
 
+  mime-db@1.52.0:
+    resolution: {integrity: sha512-sPU4uV7dYlvtWJxwwxHD0PuihVNiE7TyAbQ5SWxDCB9mUYvOgroQOwYQQOKPJ8CIbE+1ETVlOoK1UC2nU3gYvg==}
+    engines: {node: '>= 0.6'}
+
+  mime-types@2.1.35:
+    resolution: {integrity: sha512-ZDY+bPm5zTTF+YpCrAU9nK0UgICYPT0QtT1NZWFv4s++TNkcgVaT0g6+4R2uI4MjQjzysHB1zxuWL50hzaeXiw==}
+    engines: {node: '>= 0.6'}
+
   minimatch@3.1.2:
     resolution: {integrity: sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==}
 
@@ -1291,6 +1454,9 @@ packages:
     resolution: {integrity: sha512-i2tDNA0O5IrMO757lfrdQZCc2jPNDVntV0m/+4whiDfWaTKfMNgR7Qz0NAeGz/nRqF4m5/6CLzbP4/liHt12Ew==}
     engines: {node: '>=14'}
     hasBin: true
+
+  proxy-from-env@1.1.0:
+    resolution: {integrity: sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==}
 
   punycode@2.3.1:
     resolution: {integrity: sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==}
@@ -1842,10 +2008,28 @@ snapshots:
     transitivePeerDependencies:
       - debug
 
+  '@mywave/sdk@3.0.0':
+    dependencies:
+      axios: 0.25.0
+      date-fns: 4.1.0
+      delay: 5.0.0
+      jsonpath: 1.1.1
+      jstimezonedetect: 1.0.7
+      lodash: 4.17.21
+    transitivePeerDependencies:
+      - debug
+
   '@mywave/ui-react@1.0.0(@mywave/sdk@2.7.0)(react-router-dom@6.25.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@mywave/sdk': 2.7.0
       react: 18.3.1
+      react-router-dom: 6.25.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+
+  '@mywave/ui-react@1.1.0(@mywave/sdk@3.0.0)(react-dom@18.3.1(react@18.3.1))(react-router-dom@6.25.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@mywave/sdk': 3.0.0
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
       react-router-dom: 6.25.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
 
   '@mywave/ui@0.0.12': {}
@@ -2223,9 +2407,19 @@ snapshots:
 
   array-union@2.1.0: {}
 
+  asynckit@0.4.0: {}
+
   axios@0.25.0:
     dependencies:
       follow-redirects: 1.15.9
+    transitivePeerDependencies:
+      - debug
+
+  axios@1.7.7:
+    dependencies:
+      follow-redirects: 1.15.9
+      form-data: 4.0.0
+      proxy-from-env: 1.1.0
     transitivePeerDependencies:
       - debug
 
@@ -2294,6 +2488,10 @@ snapshots:
 
   color-name@1.1.4: {}
 
+  combined-stream@1.0.8:
+    dependencies:
+      delayed-stream: 1.0.0
+
   concat-map@0.0.1: {}
 
   convert-source-map@2.0.0: {}
@@ -2310,6 +2508,8 @@ snapshots:
 
   date-fns@3.6.0: {}
 
+  date-fns@4.1.0: {}
+
   debug@4.3.6:
     dependencies:
       ms: 2.1.2
@@ -2317,6 +2517,8 @@ snapshots:
   deep-is@0.1.4: {}
 
   delay@5.0.0: {}
+
+  delayed-stream@1.0.0: {}
 
   dir-glob@3.0.1:
     dependencies:
@@ -2532,6 +2734,12 @@ snapshots:
 
   follow-redirects@1.15.9: {}
 
+  form-data@4.0.0:
+    dependencies:
+      asynckit: 0.4.0
+      combined-stream: 1.0.8
+      mime-types: 2.1.35
+
   fsevents@2.3.3:
     optional: true
 
@@ -2658,6 +2866,12 @@ snapshots:
       braces: 3.0.3
       picomatch: 2.3.1
 
+  mime-db@1.52.0: {}
+
+  mime-types@2.1.35:
+    dependencies:
+      mime-db: 1.52.0
+
   minimatch@3.1.2:
     dependencies:
       brace-expansion: 1.1.11
@@ -2740,6 +2954,8 @@ snapshots:
   prelude-ls@1.2.1: {}
 
   prettier@3.3.3: {}
+
+  proxy-from-env@1.1.0: {}
 
   punycode@2.3.1: {}
 
@@ -2927,7 +3143,7 @@ snapshots:
     dependencies:
       browserslist: 4.23.2
       escalade: 3.1.2
-      picocolors: 1.0.1
+      picocolors: 1.1.0
 
   uri-js@4.4.1:
     dependencies:
