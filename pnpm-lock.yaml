@@ -76,11 +76,11 @@ importers:
   examples/react-starter:
     dependencies:
       '@mywave/sdk':
-        specifier: 2.7.0
-        version: 2.7.0
+        specifier: 3.0.0
+        version: 3.0.0
       '@mywave/ui-react':
-        specifier: 1.0.0
-        version: 1.0.0(@mywave/sdk@2.7.0)(react-router-dom@6.25.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
+        specifier: 1.1.0
+        version: 1.1.0(@mywave/sdk@3.0.0)(react-dom@18.3.1(react@18.3.1))(react-router-dom@6.25.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
       axios:
         specifier: ^1.7.7
         version: 1.7.7
@@ -485,12 +485,24 @@ packages:
   '@mywave/sdk@2.7.0':
     resolution: {integrity: sha512-2AHPePk2JuMdGqcaU7AKLxnyjddUm479NRG6v54VI8h4zdd9LJ2woi8C8XYHxVz2FWZkLpl+xcBc3MCTWTdEjA==, tarball: https://mywave.jfrog.io/artifactory/api/npm/npm-release-local/@mywave/sdk/-/@mywave/sdk-2.7.0.tgz}
 
+  '@mywave/sdk@3.0.0':
+    resolution: {integrity: sha512-6gnFNHbvfidJAx4o7zDPkTwdYc/M7N6JXNOJpFI0Qthyfsoj7GodBWXq4WDpNZFFPk3v8jyA2Fj+Uh4xZNBA9A==, tarball: https://mywave.jfrog.io/artifactory/api/npm/npm-release-local/@mywave/sdk/-/@mywave/sdk-3.0.0.tgz}
+
   '@mywave/ui-react@1.0.0':
     resolution: {integrity: sha512-639pOuH0IPRX7gCiJndKsSJ4T53tE4uw28kb1GndS6ZUjMvwIy0mG60H7qOnP0uE1wdbjyc+QKt8auyvOtcKTQ==, tarball: https://mywave.jfrog.io/artifactory/api/npm/npm-release-local/@mywave/ui-react/-/@mywave/ui-react-1.0.0.tgz}
     hasBin: true
     peerDependencies:
       '@mywave/sdk': latest
       react: ^18.0.0
+      react-router-dom: ^6.0.0
+
+  '@mywave/ui-react@1.1.0':
+    resolution: {integrity: sha512-NHraxVmFRNnzXY8JFOJGl5Z9eppP6XGbQcVSIycDVd7UCo2m/h2EJGu8NFARUXbEBwt865f2XI1dwHTz+hoNgA==, tarball: https://mywave.jfrog.io/artifactory/api/npm/npm-release-local/@mywave/ui-react/-/@mywave/ui-react-1.1.0.tgz}
+    hasBin: true
+    peerDependencies:
+      '@mywave/sdk': '>=3'
+      react: ^18.3.1
+      react-dom: ^18.3.1
       react-router-dom: ^6.0.0
 
   '@mywave/ui@0.0.12':
@@ -949,6 +961,9 @@ packages:
 
   date-fns@3.6.0:
     resolution: {integrity: sha512-fRHTG8g/Gif+kSh50gaGEdToemgfj74aRX3swtiouboip5JDLAyDE9F11nHMIcvOaXeOC6D7SpNhi7uFyB7Uww==}
+
+  date-fns@4.1.0:
+    resolution: {integrity: sha512-Ukq0owbQXxa/U3EGtsdVBkR1w7KOQ5gIBqdH2hkvknzZPYvBxb/aa6E8L7tmjFtkwZBu3UXBbjIgPo/Ez4xaNg==}
 
   debug@4.3.6:
     resolution: {integrity: sha512-O/09Bd4Z1fBrU4VzkhFqVgpPzaGbw6Sm9FEkBT1A/YBXQFGuuSxa1dN2nxgxS34JmKXqYx8CZAwEVoJFImUXIg==}
@@ -1932,10 +1947,28 @@ snapshots:
     transitivePeerDependencies:
       - debug
 
+  '@mywave/sdk@3.0.0':
+    dependencies:
+      axios: 0.25.0
+      date-fns: 4.1.0
+      delay: 5.0.0
+      jsonpath: 1.1.1
+      jstimezonedetect: 1.0.7
+      lodash: 4.17.21
+    transitivePeerDependencies:
+      - debug
+
   '@mywave/ui-react@1.0.0(@mywave/sdk@2.7.0)(react-router-dom@6.25.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@mywave/sdk': 2.7.0
       react: 18.3.1
+      react-router-dom: 6.25.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+
+  '@mywave/ui-react@1.1.0(@mywave/sdk@3.0.0)(react-dom@18.3.1(react@18.3.1))(react-router-dom@6.25.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@mywave/sdk': 3.0.0
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
       react-router-dom: 6.25.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
 
   '@mywave/ui@0.0.12': {}
@@ -2413,6 +2446,8 @@ snapshots:
   date-fns@1.30.1: {}
 
   date-fns@3.6.0: {}
+
+  date-fns@4.1.0: {}
 
   debug@4.3.6:
     dependencies:
