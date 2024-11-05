@@ -12,9 +12,9 @@ export const userManager = new UserManager({
 });
 
 export const mwSdkConfig = new MWSdkConfig(
-  config.VITE_API_URL,
-  config.VITE_LOGIN_URL,
-  "",
+  config.VITE_MYWAVE_API_URL ?? '',
+  config.VITE_MYWAVE_LOGIN_URL ?? '',
+  '',
 );
 mwSdkConfig.setLocale(window.navigator.language);
 
