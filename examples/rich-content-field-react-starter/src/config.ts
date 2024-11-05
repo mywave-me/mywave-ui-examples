@@ -2,6 +2,7 @@ import { validateEnv } from './utils'
 import { getRecognisedIntent } from './api'
 import { shoppingSearchResult, shoppingSearchResultAnswer }  from './shoppingSearchResult'
 import type { Data }  from './shoppingSearchResult'
+import type { RCF, RCFAnswer } from './rcf_types'
 
 export const env = validateEnv(import.meta.env)
 
@@ -13,22 +14,10 @@ export const config = {
   llmIntentRecogniseApiKey: env.VITE_LLM_INTENT_RECOGNISE_API_KEY,
 }
 
-type RCF = {
-  id: string
-  contentType: string
-  data: Data
-  isSelected: boolean
-}
-
-type RCFAnswer = {
-  contentType: string
-  data: Data
-}
-
 export const mywaveUIOptions = {
   'history.enable': true,
   getRecognisedIntent,
-  renderRichContentFieldOption: ({ id, contentType, data, isSelected}: RCF) => { 
+  renderRichContentFieldOption: ({ id, contentType, data, isSelected}: RCF<Data>) => { 
     switch (contentType) {
       case 'productPurchase': { 
         return shoppingSearchResult({ ...data, id, isSelected}) 
@@ -36,7 +25,7 @@ export const mywaveUIOptions = {
     } 
     return '' 
   }, 
-  renderRichContentFieldAnswer: ({ contentType, data }: RCFAnswer) => { 
+  renderRichContentFieldAnswer: ({ contentType, data }: RCFAnswer<Data>) => { 
     if (data) { 
       switch (contentType) {
         case 'productPurchase': {
