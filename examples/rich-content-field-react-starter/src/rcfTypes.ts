@@ -4,7 +4,6 @@ export type RCF<DataType> = {
   data: DataType
   isSelected: boolean
 }
-  
 export type RCFAnswer<DataType> = {
   contentType: string
   data: DataType
