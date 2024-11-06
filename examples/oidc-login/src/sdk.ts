@@ -16,6 +16,7 @@ export const mwSdkConfig = new MWSdkConfig(
   config.VITE_MYWAVE_LOGIN_URL ?? '',
   '',
 );
-mwSdkConfig.setLocale(window.navigator.language);
 
 export const mwSdk = new MWSdk(mwSdkConfig);
+
+mwSdk.setLocale(window.navigator.language);
