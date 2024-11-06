@@ -2,7 +2,7 @@ import { validateEnv } from './utils'
 import { getRecognisedIntent } from './api'
 import { shoppingSearchResult, shoppingSearchResultAnswer }  from './shoppingSearchResult'
 import type { Data }  from './shoppingSearchResult'
-import type { RCF, RCFAnswer } from './rcf_types'
+import type { RCF, RCFAnswer } from './rcfTypes'
 
 export const env = validateEnv(import.meta.env)
 
