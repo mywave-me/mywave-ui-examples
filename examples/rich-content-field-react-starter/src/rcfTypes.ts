@@ -1,11 +1,11 @@
 export type RCF<DataType> = {
-    id: string
-    contentType: string
-    data: DataType
-    isSelected: boolean
-  }
+  id: string
+  contentType: string
+  data: DataType
+  isSelected: boolean
+}
   
-  export type RCFAnswer<DataType> = {
-    contentType: string
-    data: DataType
-  }
+export type RCFAnswer<DataType> = {
+  contentType: string
+  data: DataType
+}
