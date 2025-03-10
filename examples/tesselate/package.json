@@ -1,7 +1,7 @@
 {
   "name": "tesselate",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -12,8 +12,8 @@
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "@mywave/ui-react": "1.0.0",
-    "@mywave/sdk": "2.7.0"
+    "@mywave/ui-react": "4.0.0",
+    "@mywave/sdk": "4.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",

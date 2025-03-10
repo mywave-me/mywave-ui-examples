@@ -1,6 +1,6 @@
-import { AnyCustomFieldDetails, renderReactField } from '@mywave/ui-react'
+import { AnyCustomFieldConfig, renderReactField } from '@mywave/ui-react'
 
-export const myCustomField: AnyCustomFieldDetails = {
+export const myCustomField: AnyCustomFieldConfig = {
   // name of the custom field as configured in the MyWave conversation
   type: 'my-custom-field',
   // whether the custom field should take up the full width of the interaction

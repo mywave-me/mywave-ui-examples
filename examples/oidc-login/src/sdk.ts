@@ -1,5 +1,5 @@
 import { UserManager } from "oidc-client-ts";
-import { MWSdk, MWSdkConfig } from "@mywave/ui";
+import { MWSdk, MWSdkConfig } from "@mywave/sdk";
 import { config } from "./config";
 
 export const userManager = new UserManager({
@@ -15,7 +15,9 @@ export const mwSdkConfig = new MWSdkConfig(
   config.VITE_API_URL,
   config.VITE_LOGIN_URL,
   "",
-);
-mwSdkConfig.setLocale(window.navigator.language);
+)
+
+const sdk = new MWSdk(mwSdkConfig);
+sdk.setLocale(window.navigator.language);
 
 export const mwSdk = new MWSdk(mwSdkConfig);
