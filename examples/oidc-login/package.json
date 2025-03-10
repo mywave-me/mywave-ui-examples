@@ -10,7 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@mywave/ui": "0.0.12",
+    "@mywave/sdk": "4.0.0",
+    "@mywave/ui": "4.0.0",
     "@tanstack/react-query": "^5.51.16",
     "date-fns": "^3.6.0",
     "oidc-client-ts": "^3.0.1",
