@@ -195,6 +195,128 @@ importers:
         specifier: ^5.4.1
         version: 5.4.5(@types/node@20.14.12)(sass@1.77.8)
 
+  examples/react-starter-v4.0:
+    dependencies:
+      '@mywave/sdk':
+        specifier: 4.0.0
+        version: 4.0.0
+      '@mywave/ui-react':
+        specifier: 4.0.0
+        version: 4.0.0(@mywave/sdk@4.0.0)(react-dom@18.3.1(react@18.3.1))(react-router-dom@6.25.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
+      axios:
+        specifier: ^1.7.7
+        version: 1.7.7
+      date-fns:
+        specifier: ^3.6.0
+        version: 3.6.0
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+      valibot:
+        specifier: ^0.37.0
+        version: 0.37.0(typescript@5.5.4)
+    devDependencies:
+      '@eslint/js':
+        specifier: ^9.9.0
+        version: 9.10.0
+      '@types/react':
+        specifier: ^18.3.3
+        version: 18.3.3
+      '@types/react-dom':
+        specifier: ^18.3.0
+        version: 18.3.0
+      '@vitejs/plugin-react':
+        specifier: ^4.3.1
+        version: 4.3.1(vite@5.4.5(@types/node@20.14.12)(sass@1.77.8))
+      eslint:
+        specifier: ^9.9.0
+        version: 9.10.0
+      eslint-plugin-react-hooks:
+        specifier: ^5.1.0-rc.0
+        version: 5.1.0-rc-fb9a90fa48-20240614(eslint@9.10.0)
+      eslint-plugin-react-refresh:
+        specifier: ^0.4.9
+        version: 0.4.9(eslint@9.10.0)
+      globals:
+        specifier: ^15.9.0
+        version: 15.9.0
+      prettier:
+        specifier: ^3.3.3
+        version: 3.3.3
+      typescript:
+        specifier: ^5.5.3
+        version: 5.5.4
+      typescript-eslint:
+        specifier: ^8.0.1
+        version: 8.5.0(eslint@9.10.0)(typescript@5.5.4)
+      vite:
+        specifier: ^5.4.1
+        version: 5.4.5(@types/node@20.14.12)(sass@1.77.8)
+
+  examples/rich-content-field-react-starter:
+    dependencies:
+      '@mywave/sdk':
+        specifier: 3.0.0
+        version: 3.0.0
+      '@mywave/ui-react':
+        specifier: 1.1.0
+        version: 1.1.0(@mywave/sdk@3.0.0)(react-dom@18.3.1(react@18.3.1))(react-router-dom@6.25.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
+      axios:
+        specifier: ^1.7.7
+        version: 1.7.7
+      date-fns:
+        specifier: ^3.6.0
+        version: 3.6.0
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+      valibot:
+        specifier: ^0.37.0
+        version: 0.37.0(typescript@5.5.4)
+    devDependencies:
+      '@eslint/js':
+        specifier: ^9.9.0
+        version: 9.10.0
+      '@types/react':
+        specifier: ^18.3.3
+        version: 18.3.3
+      '@types/react-dom':
+        specifier: ^18.3.0
+        version: 18.3.0
+      '@vitejs/plugin-react':
+        specifier: ^4.3.1
+        version: 4.3.1(vite@5.4.5(@types/node@20.14.12)(sass@1.77.8))
+      eslint:
+        specifier: ^9.9.0
+        version: 9.10.0
+      eslint-plugin-react-hooks:
+        specifier: ^5.1.0-rc.0
+        version: 5.1.0-rc-fb9a90fa48-20240614(eslint@9.10.0)
+      eslint-plugin-react-refresh:
+        specifier: ^0.4.9
+        version: 0.4.9(eslint@9.10.0)
+      globals:
+        specifier: ^15.9.0
+        version: 15.9.0
+      prettier:
+        specifier: ^3.3.3
+        version: 3.3.3
+      typescript:
+        specifier: ^5.5.3
+        version: 5.5.4
+      typescript-eslint:
+        specifier: ^8.0.1
+        version: 8.5.0(eslint@9.10.0)(typescript@5.5.4)
+      vite:
+        specifier: ^5.4.1
+        version: 5.4.5(@types/node@20.14.12)(sass@1.77.8)
+
   examples/tesselate:
     dependencies:
       '@mywave/sdk':
@@ -549,6 +671,9 @@ packages:
   '@mywave/sdk@3.0.0':
     resolution: {integrity: sha512-6gnFNHbvfidJAx4o7zDPkTwdYc/M7N6JXNOJpFI0Qthyfsoj7GodBWXq4WDpNZFFPk3v8jyA2Fj+Uh4xZNBA9A==, tarball: https://mywave.jfrog.io/artifactory/api/npm/npm-release-local/@mywave/sdk/-/@mywave/sdk-3.0.0.tgz}
 
+  '@mywave/sdk@4.0.0':
+    resolution: {integrity: sha512-8721lHmOMbFDpLI8fd+6ptX+vUHDZPcGZvr9qLBnbTE2RVuOCuTWBqmHFUZoBnop+BMPK+hLwP/Qh+htSuoo2w==, tarball: https://mywave.jfrog.io/artifactory/api/npm/npm-release-local/@mywave/sdk/-/@mywave/sdk-4.0.0.tgz}
+
   '@mywave/ui-react@1.0.0':
     resolution: {integrity: sha512-639pOuH0IPRX7gCiJndKsSJ4T53tE4uw28kb1GndS6ZUjMvwIy0mG60H7qOnP0uE1wdbjyc+QKt8auyvOtcKTQ==, tarball: https://mywave.jfrog.io/artifactory/api/npm/npm-release-local/@mywave/ui-react/-/@mywave/ui-react-1.0.0.tgz}
     hasBin: true
@@ -559,6 +684,15 @@ packages:
 
   '@mywave/ui-react@1.1.0':
     resolution: {integrity: sha512-NHraxVmFRNnzXY8JFOJGl5Z9eppP6XGbQcVSIycDVd7UCo2m/h2EJGu8NFARUXbEBwt865f2XI1dwHTz+hoNgA==, tarball: https://mywave.jfrog.io/artifactory/api/npm/npm-release-local/@mywave/ui-react/-/@mywave/ui-react-1.1.0.tgz}
+    hasBin: true
+    peerDependencies:
+      '@mywave/sdk': '>=3'
+      react: ^18.3.1
+      react-dom: ^18.3.1
+      react-router-dom: ^6.0.0
+
+  '@mywave/ui-react@4.0.0':
+    resolution: {integrity: sha512-Nlwi0kXS2S5PqIf+Pl/1hvh0fRAHq266k+B+AXhO3KmrvYtpnJEMhysTasPAOxv+792ieH2MSz7dF6kdSxIE4Q==, tarball: https://mywave.jfrog.io/artifactory/api/npm/npm-release-local/@mywave/ui-react/-/@mywave/ui-react-4.0.0.tgz}
     hasBin: true
     peerDependencies:
       '@mywave/sdk': '>=3'
@@ -2019,6 +2153,17 @@ snapshots:
     transitivePeerDependencies:
       - debug
 
+  '@mywave/sdk@4.0.0':
+    dependencies:
+      axios: 0.25.0
+      date-fns: 4.1.0
+      delay: 5.0.0
+      jsonpath: 1.1.1
+      jstimezonedetect: 1.0.7
+      lodash: 4.17.21
+    transitivePeerDependencies:
+      - debug
+
   '@mywave/ui-react@1.0.0(@mywave/sdk@2.7.0)(react-router-dom@6.25.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@mywave/sdk': 2.7.0
@@ -2028,6 +2173,13 @@ snapshots:
   '@mywave/ui-react@1.1.0(@mywave/sdk@3.0.0)(react-dom@18.3.1(react@18.3.1))(react-router-dom@6.25.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@mywave/sdk': 3.0.0
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+      react-router-dom: 6.25.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+
+  '@mywave/ui-react@4.0.0(@mywave/sdk@4.0.0)(react-dom@18.3.1(react@18.3.1))(react-router-dom@6.25.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@mywave/sdk': 4.0.0
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
       react-router-dom: 6.25.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
