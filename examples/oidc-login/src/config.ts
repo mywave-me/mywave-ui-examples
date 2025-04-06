@@ -28,13 +28,6 @@ const ConfigSchema = object({
 
   VITE_API_URL: v.url("VITE_API_URL"),
   VITE_LOGIN_URL: v.url("VITE_LOGIN_URL"),
-
-  VITE_LLM_INTENT_RECOGNISE_ENDPOINT: v.url(
-    "VITE_LLM_INTENT_RECOGNISE_ENDPOINT",
-  ),
-  VITE_LLM_INTENT_RECOGNISE_API_KEY: optional(
-    v.string("VITE_LLM_INTENT_RECOGNISE_API_KEY"),
-  ),
 });
 
 const result = safeParse(ConfigSchema, import.meta.env);
