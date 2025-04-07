@@ -28,8 +28,6 @@ VITE_OIDC_CLIENT_ID=<Your client application's identifier as registered with the
 VITE_OIDC_CLIENT_SECRET=<Your client application's secret as registered with the OIDC/OAuth2>
 VITE_API_URL=<Your MyWave platform url>
 VITE_LOGIN_URL=<Your MyWave login url>
-VITE_LLM_INTENT_RECOGNISE_ENDPOINT=<Your LLM intent recognition endpoint>
-VITE_LLM_INTENT_RECOGNISE_API_KEY=<Your LLM intent recognition api key>
 ```
 
 ### for SAP B1
@@ -42,7 +40,6 @@ VITE_OIDC_CLIENT_ID=<OIDC Client ID>
 VITE_OIDC_CLIENT_SECRET=
 VITE_API_URL=<MyWave LB address>/mywave
 VITE_LOGIN_URL=<MyWave LB address>/integration/api/sso/login
-VITE_LLM_INTENT_RECOGNISE_ENDPOINT=<MyWave LB address>/integation/api/llm/intent
 ```
 
 For example, if the "Authentication Server Address", "OIDC Client ID", and "MyWave LB address" for B1 are "https://sapb1.cloudiax.com:40020", "b1-ext-X", and "https://sapb1.app.mywave.me" respectively, the configuration in the `.env.local` file should be:
@@ -53,7 +50,6 @@ VITE_OIDC_CLIENT_ID=b1-ext-X
 VITE_OIDC_CLIENT_SECRET=
 VITE_API_URL=https://sapb1.app.mywave.me/mywave
 VITE_LOGIN_URL=https://sapb1.app.mywave.me/integation/api/sso/login
-VITE_LLM_INTENT_RECOGNISE_ENDPOINT=https://sapb1.app.mywave.me/integation/api/llm/intent
 ```
 
 B1 does not ask for OIDC client secret, so you should leave `VITE_OIDC_CLIENT_SECRET` empty.
@@ -84,3 +80,22 @@ Build the example app for deployment by running the following command:
 ```bash
 pnpm build
 ```
+
+## Customization
+
+In the `public` folder find `theme.css` file. This is the file where all styling customization can be done. 
+Simply add css variables into the class `.MyWaveUI`.
+Some of them, most commonly used, are already there. We also commented the purpose of those variables.
+
+The whole list of variables used in the app can be found at the end of the file.
+Simply move any of them into `.MyWaveUI` and redefine the value.
+
+### Logo(s)
+
+Logo is set in the same `theme.css` file:
+- `--mw-landing-page-logo` this variable is responsible for the logo on the landing page
+- `--mw-sidebar-logo` this variable is responsible for the logo on the left hand side panel
+
+### Favicon
+
+Update `favicon.svg` file in the `public` folder and the app will use your updated favicon.

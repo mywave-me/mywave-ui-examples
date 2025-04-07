@@ -3,7 +3,6 @@ import { MyWaveUi } from '@mywave/ui-react'
 import { StrictMode } from 'react'
 import { config } from './config'
 import { createRoot } from 'react-dom/client'
-import { getRecognisedIntent } from './api'
 
 import './index.css'
 import '@mywave/ui-react/dist/style.css'
@@ -23,7 +22,6 @@ createRoot(document.getElementById('root')!).render(
       sdkConfig={sdkConfig}
       options={{
         'history.enable': true,
-        getRecognisedIntent,
       }}
     />
   </StrictMode>

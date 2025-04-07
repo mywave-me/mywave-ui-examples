@@ -25,12 +25,6 @@ const ConfigSchema = object({
   VITE_MYWAVE_API_URL: v.url('VITE_MYWAVE_API_URL'),
   VITE_MYWAVE_LOGIN_URL: optional(v.url('VITE_MYWAVE_LOGIN_URL')),
   VITE_MYWAVE_SIGNUP_URL: optional(v.url('VITE_MYWAVE_SIGNUP_URL')),
-  VITE_LLM_INTENT_RECOGNISE_ENDPOINT: v.url(
-    'VITE_LLM_INTENT_RECOGNISE_ENDPOINT'
-  ),
-  VITE_LLM_INTENT_RECOGNISE_API_KEY: optional(
-    v.string('VITE_LLM_INTENT_RECOGNISE_API_KEY')
-  ),
 })
 
 const result = safeParse(ConfigSchema, import.meta.env)
@@ -49,6 +43,4 @@ export const config = {
   apiUrl: result.output.VITE_MYWAVE_API_URL,
   loginUrl: result.output.VITE_MYWAVE_LOGIN_URL ?? '',
   signupUrl: result.output.VITE_MYWAVE_SIGNUP_URL ?? '',
-  llmIntentRecogniseEndpoint: result.output.VITE_LLM_INTENT_RECOGNISE_ENDPOINT,
-  llmIntentRecogniseApiKey: result.output.VITE_LLM_INTENT_RECOGNISE_API_KEY,
 }
