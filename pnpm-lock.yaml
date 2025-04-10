@@ -15,11 +15,11 @@ importers:
   examples/custom-field-react-starter:
     dependencies:
       '@mywave/sdk':
-        specifier: 4.0.0
-        version: 4.0.0
+        specifier: 4.0.1
+        version: 4.0.1
       '@mywave/ui-react':
-        specifier: 4.0.0
-        version: 4.0.0(@mywave/sdk@4.0.0)(react-dom@18.3.1(react@18.3.1))(react-router-dom@6.25.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
+        specifier: 4.0.1
+        version: 4.0.1(@mywave/sdk@4.0.1)(react-dom@18.3.1(react@18.3.1))(react-router-dom@6.25.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
       axios:
         specifier: ^1.7.7
         version: 1.7.7
@@ -610,8 +610,20 @@ packages:
   '@mywave/sdk@4.0.0':
     resolution: {integrity: sha512-8721lHmOMbFDpLI8fd+6ptX+vUHDZPcGZvr9qLBnbTE2RVuOCuTWBqmHFUZoBnop+BMPK+hLwP/Qh+htSuoo2w==, tarball: https://mywave.jfrog.io/artifactory/api/npm/npm-release-local/@mywave/sdk/-/@mywave/sdk-4.0.0.tgz}
 
+  '@mywave/sdk@4.0.1':
+    resolution: {integrity: sha512-6akGuare4QDs28TxwrjrCC0yxFy7VnnVSZZ7Bb2OrJoENeFuCOjA/u9AxgRhb18qy99Ncw2jWGBs2uH+lxZ5Eg==, tarball: https://mywave.jfrog.io/artifactory/api/npm/npm-release-local/@mywave/sdk/-/@mywave/sdk-4.0.1.tgz}
+
   '@mywave/ui-react@4.0.0':
     resolution: {integrity: sha512-Nlwi0kXS2S5PqIf+Pl/1hvh0fRAHq266k+B+AXhO3KmrvYtpnJEMhysTasPAOxv+792ieH2MSz7dF6kdSxIE4Q==, tarball: https://mywave.jfrog.io/artifactory/api/npm/npm-release-local/@mywave/ui-react/-/@mywave/ui-react-4.0.0.tgz}
+    hasBin: true
+    peerDependencies:
+      '@mywave/sdk': '>=3'
+      react: ^18.3.1
+      react-dom: ^18.3.1
+      react-router-dom: ^6.0.0
+
+  '@mywave/ui-react@4.0.1':
+    resolution: {integrity: sha512-wD6mFVIWPIkK/9lh6mHoC/+DU0ehbQOLy14Sp4Rk0pIXZsfxZimeda+MCo9X4wBHLc0xXmwA2O0DoQmcauRSUw==, tarball: https://mywave.jfrog.io/artifactory/api/npm/npm-release-local/@mywave/ui-react/-/@mywave/ui-react-4.0.1.tgz}
     hasBin: true
     peerDependencies:
       '@mywave/sdk': '>=3'
@@ -2059,9 +2071,27 @@ snapshots:
     transitivePeerDependencies:
       - debug
 
+  '@mywave/sdk@4.0.1':
+    dependencies:
+      axios: 0.25.0
+      date-fns: 4.1.0
+      delay: 5.0.0
+      jsonpath: 1.1.1
+      jstimezonedetect: 1.0.7
+      lodash: 4.17.21
+    transitivePeerDependencies:
+      - debug
+
   '@mywave/ui-react@4.0.0(@mywave/sdk@4.0.0)(react-dom@18.3.1(react@18.3.1))(react-router-dom@6.25.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@mywave/sdk': 4.0.0
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+      react-router-dom: 6.25.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+
+  '@mywave/ui-react@4.0.1(@mywave/sdk@4.0.1)(react-dom@18.3.1(react@18.3.1))(react-router-dom@6.25.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@mywave/sdk': 4.0.1
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
       react-router-dom: 6.25.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)

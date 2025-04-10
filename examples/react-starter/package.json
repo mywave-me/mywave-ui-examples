@@ -10,8 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@mywave/sdk": "4.0.0",
-    "@mywave/ui-react": "4.0.0",
+    "@mywave/sdk": "4.0.1",
+    "@mywave/ui-react": "4.0.1",
     "axios": "^1.7.7",
     "date-fns": "^3.6.0",
     "react": "^18.3.1",
