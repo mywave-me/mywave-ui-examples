@@ -44,3 +44,11 @@ Logo is set in the same `theme.css` file:
 ### Favicon
 
 Update `favicon.svg` file in the `public` folder and the app will use your updated favicon.
+
+## Building the app
+
+When you are ready to build the app, run
+
+```bash
+npm run | yarn | pnpm build
+```
