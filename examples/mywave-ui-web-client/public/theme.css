@@ -1,0 +1,137 @@
+.MyWaveUI {
+  /* Color of the background on the landing page */
+  --mw-landing-view-bg: #fff;
+
+  /* Color of the button Let's go on the landing page */
+  --mw-intent-submit-button-bg: #404eff;
+
+  /* Color of the left side panel on the landing page */
+  --mw-navbar-bg: #404eff;
+
+  /* Color of the tile of predefined interaction on the landing page */
+  --mw-intent-button-bg: #e193d533;
+
+  /* Color of background of the prompt on the conversation page */
+  --mw-interaction-prompt-bg: #f5f6ff;
+
+  /* Color of the button to continue on the conversation page */
+  --mw-interaction-continue-bg: #404eff;
+
+  /* Color of the text inside the prompt on the conversation page */
+  --mw-interaction-prompt-color: #000;
+
+  /* Color of the text inside the input for text field on the conversation page */
+  --mw-field-text-color: #000;
+
+  /* Setting the logo on the landing page */
+  --mw-landing-page-logo: url('logo.svg');
+
+  /* Setting the logo on the left hand side panel */
+  --mw-sidebar-logo: url('sidebar-logo-desktop.svg');
+
+  /* Setting the logo on the left hand side panel for mobile*/
+  --mw-sidebar-logo: url('sidebar-logo-mobile.svg');
+}
+
+@media (min-width: 768px) {
+  .MyWaveUI {
+    --mw-sidebar-logo: url('sidebar-logo-desktop.svg');
+    --mw-sidebar-logo-position: left;
+  }
+}
+
+/* All the variables used in the app:
+.MyWaveUI {
+  --mw-root-bg: #fff;
+  --mw-checkbox-button-color: #000;
+  --mw-checkbox-label-color: #000;
+  --mw-confirmation-negative-bg: #404eff;
+  --mw-confirmation-negative-border-color: transparent;
+  --mw-confirmation-negative-color: #fff;
+  --mw-confirmation-positive-bg: #404eff;
+  --mw-confirmation-positive-border-color: transparent;
+  --mw-confirmation-positive-color: #fff;
+  --mw-conversation-max-width: 600px;
+  --mw-field-bg: #fff;
+  --mw-field-border-color: #dcdcdc;
+  --mw-field-error-message-color: #ff3b00;
+  --mw-field-focus-border-color: #000;
+  --mw-field-gap: 0.7rem;
+  --mw-field-hint-color: #a7a7a7;
+  --mw-field-label-color: #757575;
+  --mw-field-placeholder-color: #bababa;
+  --mw-field-text-color: #000;
+  --mw-history-item-border-color: #fff;
+  --mw-history-item-color: #fff;
+  --mw-history-selected-item-bg: #fff;
+  --mw-history-selected-item-color: #000;
+  --mw-intent-button-bg: #e193d533;
+  --mw-intent-button-text-color: #000;
+  --mw-intent-picker-skip-to-active-color: #404eff;
+  --mw-intent-picker-skip-to-inactive-color: #f1f1f1;
+  --mw-intent-picker-title-color: #000;
+  --mw-intent-placeholder-color: #2d2d2d;
+  --mw-intent-submit-button-bg: #404eff;
+  --mw-interaction-answer-bg: #fff;
+  --mw-interaction-confirm-bg: #404eff;
+  --mw-interaction-confirm-border-color: transparent;
+  --mw-interaction-confirm-color: #fff;
+  --mw-interaction-continue-bg: #404eff;
+  --mw-interaction-continue-border-color: transparent;
+  --mw-interaction-continue-color: #fff;
+  --mw-interaction-continue-disabled-bg: #b3b8ff;
+  --mw-interaction-continue-disabled-border-color: transparent;
+  --mw-interaction-continue-disabled-color: #fff;
+  --mw-interaction-error-message-color: #ff3b00;
+  --mw-interaction-prompt-bg: #f5f6ff;
+  --mw-interaction-prompt-border-color: transparent;
+  --mw-interaction-prompt-color: #000;
+  --mw-interaction-view-answered-opacity: 0.5;
+  --mw-landing-page-logo-position-login: center;
+  --mw-landing-page-logo-position: center;
+  --mw-landing-page-logo: url('mw-landing-page-logo.svg');
+  --mw-login-button-bg: #404eff;
+  --mw-login-button-text-color: #fdf6fc;
+  --mw-login-dialogue-bg: #fff;
+  --mw-login-error-validation-color: #ff3b00;
+  --mw-login-input-focus-border: #404eff;
+  --mw-login-modal-image: url('mw-landing-page-logo.svg');
+  --mw-error-modal-image: url('mw-landing-page-logo.svg');
+  --mw-error-modal-image-margin-top: 2rem;
+  --mw-error-modal-image-margin-bottom: 2rem;
+  --mw-lookup-dropdown-bg: #fff;
+  --mw-lookup-dropdown-border-color: #000;
+  --mw-lookup-dropdown-max-height: 22.18rem;
+  --mw-lookup-dropdown-color: #000;
+  --mw-navbar-bg: #000;
+  --mw-radio-button-color: #000;
+  --mw-radio-label-color: #000;
+  --mw-rich-content-window-background: #fff;
+  --mw-select-filter-hint-color: #a7a7a7;
+  --mw-select-filter-padding: 0.3rem 0.5rem;
+  --mw-select-filter-font-size: 0.8rem;
+  --mw-select-option-color: #000;
+  --mw-select-option-max-height: 14.5rem;
+  --mw-select-option-padding: 0.25rem 0.75rem;
+  --mw-select-option-line-height: auto;
+  --mw-select-option-highlight-focus-bg: #dcdcdc;
+  --mw-select-option-highlight-hover-bg: #f6f6f6;
+  --mw-select-option-highlight-hover-color: #000;
+  --mw-select-option-selected-bg: #bababa;
+  --mw-select-option-selected-color: #000;
+  --mw-select-selected-pill-bg: #dcdcdc;
+  --mw-select-selected-pill-color: #000;
+  --mw-select-selected-pill-padding: 0.2rem 0.75rem;
+  --mw-select-selected-pill-gap: 0.3rem;
+  --mw-select-selected-pill-cross-icon-gap: 0.75rem;
+  --mw-select-selected-pill-content-line-height: auto;
+
+  --mw-sidebar-button-border-color: #fff;
+  --mw-sidebar-logo-position: center;
+  --mw-sidebar-logo: url('mw-sidebar-logo-mobile.svg');
+  --mw-submit-text-color: #fdf6fc;
+  --mw-submitted-answer-color: #a7a7a7;
+  --mw-text-input-color: #000;
+  --mw-textlink-color: #404eff;
+}
+*/
