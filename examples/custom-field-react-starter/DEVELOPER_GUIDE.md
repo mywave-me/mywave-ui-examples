@@ -48,13 +48,13 @@ import { AnyCustomFieldConfig } from '@mywave/ui-react';
 import React from 'react';
 
 const MyCustomTextField: AnyCustomFieldConfig = {
-  type: 'my-custom-text',
+  type: 'my-custom-text-field',
 
   validate: (value: string) => {
-    return value.length > 0;
+    return value && value.trim().length > 0;
   },
 
-  validationMessage: 'This field cannot be empty.',
+  validationMessage: 'This field is required.',
 
   renderField: ({ ref, onChange, field, onSubmit }) => {
 
@@ -65,7 +65,7 @@ const MyCustomTextField: AnyCustomFieldConfig = {
     };
     return (
       <div style={{ padding: '1rem' }}>
-        <label>{context.config.label}</label>
+        {props.label && <label style={{ display: 'block', marginBottom: '4px' }}>{props.label}</label>}
         <input
           type="text"
           placeholder={props.placeholder ?? ''}
@@ -79,15 +79,19 @@ const MyCustomTextField: AnyCustomFieldConfig = {
               onSubmit(); 
             }
           }}
-          placeholder={context.config.placeholder}
         />
       </div>
     );
   },
 
-  renderAnswer: ({ value }) => {
-    return <span>Your answer: {value}</span>;
-  },
+  renderAnswer: ({ field, ref }) => {
+    return () => {
+      if (ref.current) {
+        const value = field.getCustomFieldData("value");
+        ref.current.innerHTML = renderToString(<span style={{ fontStyle: 'italic' }}>{value ?? 'No answer provided'}</span>);
+      }
+    }
+  }
 };
 
 export default MyCustomTextField;
@@ -161,5 +165,7 @@ When setting a CustomField in the Innovation Hub, you need to create a new one a
 - Ensure that the @mywave/ui-react package is installed and properly configured in your project.
 
 - Customize the CustomField component further to handle other field types or validation logic as needed.
+
+- You can include any number of custom fields as part of the MyWave UI
 
 - Refer to the [MyWave UI Examples repository](https://github.com/mywave-me/mywave-ui-examples) for more examples and configurations.
