@@ -58,7 +58,6 @@ const MyCustomTextField: AnyCustomFieldConfig = {
 
   renderField: ({ ref, onChange, field, onSubmit }) => {
 
-    const value = field.getAnswer() ?? '';
     const props = field.getCustomFieldProps() as {
       placeholder?: string;
       label?: string;
@@ -69,7 +68,6 @@ const MyCustomTextField: AnyCustomFieldConfig = {
         <input
           type="text"
           placeholder={props.placeholder ?? ''}
-          value={value ?? ''}
           onChange={(e) => {
             field.setAnswer(e.target.value); 
             onChange();
