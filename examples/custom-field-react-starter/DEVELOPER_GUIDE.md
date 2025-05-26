@@ -5,7 +5,7 @@ Begin by cloning the custom field starter template:
 
 ```
 git clone https://github.com/mywave-me/mywave-ui-examples.git
-cd mywave-ui-examples/examples/custom-field-react-starter
+cd mywave-ui-examples
 ```
 
 ### Prerequisites
@@ -24,6 +24,7 @@ If not, run the setup script:
 Navigate to the project directory and install the required dependencies:
 
 ```
+cd examples/custom-field-react-starter
 pnpm install
 ```
 
@@ -55,12 +56,19 @@ const MyCustomTextField: AnyCustomFieldConfig = {
 
   validationMessage: 'This field cannot be empty.',
 
-  renderField: ({ value, onChange, context }) => {
+  renderField: ({ ref, onChange, field, onSubmit }) => {
+
+    const value = field.getAnswer() ?? '';
+    const props = field.getCustomFieldProps() as {
+      placeholder?: string;
+      label?: string;
+    };
     return (
       <div style={{ padding: '1rem' }}>
         <label>{context.config.label}</label>
         <input
           type="text"
+          placeholder={props.placeholder ?? ''}
           value={value ?? ''}
           onChange={(e) => {
             field.setAnswer(e.target.value); 
@@ -96,12 +104,11 @@ export default MyCustomTextField;
 |validate	| A function that receives the value and returns true/false. |
 |validationMessage	| Message shown when validation fails. |
 |renderField	| renderField is a callback that provides necessary information to render UI for the field itself.<br><br>renderField should return a function that manipulates DOM. It takes three parameters:<br> - `ref` is React RefObject. ref.current is the DOM element where the field will be rendered in. <br> - `field` is the CustomField object. For more details see CustomField section of this guide <br> - `onSubmit` If the submit button is hidden, but you still need to submit an answer, manually call onSubmit to submit the interaction. Before calling onSubmit the answer should be set to the field with field.setAnswer(answer) <br><br> Other fields are:<br> - `autoFocus`	Should this field be auto-focused on render?<br> - `hasMultipleFields`		Are there other fields in this interaction?<br> - `onChange`	`(value: A) => void	Call` this to update the field’s value.|
-|renderAnswer	| renderAnswer is a callback that provides necessary information for rendering UI for the Answer. <br> <br>renderAnswer should return a function that manipulates DOM. It takes two parameters:<br> - `ref` is React RefObject. ref.current is the DOM element where the field will be rendered in<br> - `field` is the CustomField object. For more details see CustomField section of this guide<br> - `hasMultipleFields` Are there other fields in this interaction?
- |
+|renderAnswer	| renderAnswer is a callback that provides necessary information for rendering UI for the Answer. <br> <br>renderAnswer should return a function that manipulates DOM. It takes two parameters:<br> - `ref` is React RefObject. ref.current is the DOM element where the field will be rendered in<br> - `field` is the CustomField object. For more details see CustomField section of this guide<br> - `hasMultipleFields` Are there other fields in this interaction?|
 
 ### Field Object
 The CustomField object (refer to field above) that is passed to the renderField or renderAnswer functions, has the following methods:
-|METHOD NAME|	DESCRIPTION|
+|Method Name|	Description|
 |---|---|
 |setAnswer(value)	|use setAnswer to set the answer of the field|
 |getAnswer()	|getAnswer returns the current answer that has been set on the field|
