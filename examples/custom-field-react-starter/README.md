@@ -65,7 +65,7 @@ Open the project in your preferred code editor. Familiarize yourself with the fo
 
 `index.html`: The HTML template that includes the root div (`<div id="root"></div>`).
 
-## 4. 🛠️ Implement the Custom Field Configuration
+## 4. Implement the Custom Field Configuration
 
 Open or create `src/myCustomField.tsx`. This file is where you define your custom field logic.
 
@@ -146,7 +146,7 @@ The CustomField object (refer to field above) that is passed to the renderField 
 
 
 
-## 5. 🧪 Register the Field
+## 5. Register the Field
 Open `src/main.tsx` to register the custom field within MyWave. 
 
 In the starter repo, it is already done for the myCustomField.
