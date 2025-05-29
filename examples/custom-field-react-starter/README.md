@@ -72,30 +72,29 @@ Open or create `src/myCustomField.tsx`. This file is where you define your custo
 Here’s a minimal working example of a custom text field:
 
 ```typescript
-import { AnyCustomFieldConfig } from '@mywave/ui-react';
+import { AnyCustomFieldConfig, renderReactField } from '@mywave/ui-react';
 import React from 'react';
+import { renderToString } from "react-dom/server"
 
 const MyCustomTextField: AnyCustomFieldConfig = {
   type: 'my-custom-text-field',
 
-  validate: (value: string) => {
-    return value && value.trim().length > 0;
+  validate: (value: any) => {
+    return value && value !== null;
   },
 
   validationMessage: 'This field is required.',
 
-  renderField: ({ ref, onChange, field, onSubmit }) => {
+  renderField: renderReactField(({ ref, onChange, field, onSubmit }) => {
 
-    const props = field.getCustomFieldProps() as {
-      placeholder?: string;
-      label?: string;
-    };
+    const placeholder = field.getCustomFieldData("placeholder") || "";
+    const label = field.getCustomFieldData("label");
     return (
       <div style={{ padding: '1rem' }}>
-        {props.label && <label style={{ display: 'block', marginBottom: '4px' }}>{props.label}</label>}
+        {label && <label style={{ display: 'block', marginBottom: '4px' }}>{label}</label>}
         <input
           type="text"
-          placeholder={props.placeholder ?? ''}
+          placeholder={placeholder ?? ''}
           onChange={(e) => {
             field.setAnswer(e.target.value); 
             onChange();
@@ -108,7 +107,7 @@ const MyCustomTextField: AnyCustomFieldConfig = {
         />
       </div>
     );
-  },
+  }),
 
   renderAnswer: ({ field, ref }) => {
     return () => {
